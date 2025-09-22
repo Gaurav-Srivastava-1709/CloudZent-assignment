@@ -77,7 +77,51 @@
     </div>
 
     <!-- Pagination -->
-    <div class="mt-3 d-flex justify-content-center">
-        {{ $books->withQueryString()->links('pagination::bootstrap-5') }}
+    <div class="d-flex justify-content-center mt-4">
+        <nav aria-label="Page navigation">
+            <ul class="pagination pagination-lg shadow-sm rounded">
+                {{ $books->withQueryString()->links('pagination::bootstrap-5') }}
+            </ul>
+        </nav>
     </div>
+
+    <style>
+        /* Highlight current page in pagination */
+        .pagination .page-item.active .page-link {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            color: #fff;
+            font-weight: 600;
+            box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.15);
+        }
+        .pagination .page-link {
+            border-radius: 0.5rem;
+            margin: 0 2px;
+            transition: all 0.2s;
+        }
+        .pagination .page-link:hover {
+            background-color: #0b5ed7;
+            color: #fff;
+        }
+        /* Responsive table */
+        @media (max-width: 575.98px) {
+            table thead {
+                display: none;
+            }
+            table tbody tr {
+                display: block;
+                margin-bottom: 1rem;
+            }
+            table tbody td {
+                display: flex;
+                justify-content: space-between;
+                padding: 0.5rem 1rem;
+            }
+            table tbody td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #6c757d;
+            }
+        }
+    </style>
 @endsection
