@@ -212,7 +212,7 @@
                             <div class="col-12 col-lg-6 bg-white">
                                 <div class="card-body p-4 p-md-5">
                                     <h3 class="mb-4">Login to Book CRUD</h3>
-                                    <form action="{{ route('login') }}" method="POST">
+                                    <form action="{{ secure_url(route('login')) }}" method="POST">
                                         @csrf
                                         <!-- Email -->
                                         <div class="mb-4">
