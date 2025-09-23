@@ -10,7 +10,7 @@
 <body class="container mt-5">
 
     <div class="mb-4">
-        <h1 class="text-center">📚 Book Management</h1>
+        <h1 class="text-center">📚 Book Crud</h1>
     </div>
 
     <div>

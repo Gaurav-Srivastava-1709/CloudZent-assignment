@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile | Student Management System</title>
+    <title>Profile |📚 Book CRUD</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -149,7 +149,7 @@
                                 @endif
                             </div>
 
-                            <button type="submit" class="btn btn-primary">{{ __('Save Changes') }}</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-save me-1"></i> {{ __('Save') }}</button>
 
                             @if (session('status') === 'profile-updated')
                                 <span class="text-success ms-2" id="save-message">{{ __('Saved.') }}</span>

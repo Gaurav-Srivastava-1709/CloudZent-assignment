@@ -229,6 +229,11 @@
                             <a href="{{ route('books.index') }}" class="btn btn-custom-primary">
                                 <i class="fas fa-book me-2"></i> See The List Of The Books
                             </a>
+                             @if(auth()->user()->is_admin)
+                            <li class="nav-item btn btn-custom-primary">
+                                <a class="nav-link" href="{{ route('books.index') }}">📖 Manage Books</a>
+                            </li>
+                        @endif
                         </div>
                     </div>
                 </div>
